@@ -1,0 +1,12 @@
+#image-hero {
+  background-image: url('./assets/images/img-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#team-introduction {
+  background-image: url('./assets/images/img-3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
