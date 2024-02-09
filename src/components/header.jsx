@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { TbSunMoon } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -16,7 +17,7 @@ function Header() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen}  className={darkMode ? 'dark bg-blue-950 text-white' : 'bg-blue-700 text-white'}>
+    <Navbar shouldHideOnScroll onMenuOpenChange={setIsMenuOpen} className={darkMode ? 'dark bg-blue-950 text-white' : 'bg-blue-700 text-white'}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -52,7 +53,7 @@ function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="flex gap-3">
-          <Button as={Link} className="bg-lime-600 text-white font-bold" radius="sm" href="#" variant="flat" >
+          <Button to="login" as={Link} className="bg-lime-600 text-white font-bold" radius="sm" href="#" variant="flat" >
             Login
           </Button>
           <button onClick={() => setDarkMode(prevMode => !prevMode)}>
